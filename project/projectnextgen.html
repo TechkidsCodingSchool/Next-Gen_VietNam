@@ -93,6 +93,18 @@
 				height:40px;
 				float:right;
 			}
+			#section{}
+			#post{}
+			#post img {
+				max-width:75%;
+				max-height:175px;
+			}
+			#post #postHeader{
+				color:blue;
+				text-transform: uppercase;
+				font-size:250%;
+				position:absolute;
+			}
 		</style>
 		</head>
 		<body>
@@ -101,7 +113,7 @@
 			  <a href="#hot" style="float: left;">Hottest</a>
 			  <a href="#new" style="float: left;">Newest</a>
 			  <a href="#recommended" style="float: left;">Recommend</a>
-			  <a href="#Mostliked" style="float: left;">Favourites</a>
+			  <a href="#mostliked" style="float: left;">Favourites</a>
 			  <a href="#contact" style="float: right;">Contact</a>
 			  <a href="#about" style="float: right;">About</a>
 			</div>
@@ -109,8 +121,14 @@
 				<div class="container"></div>
 			</div>
 			<div class="container">
-				<h1>Text</h1>
-				<h3>text</h3>
+				<h1>Hottest</h1>
+				
+				<div id="section">
+					<div id="post">
+						<img src="hanoi.png"></img>
+						<span id="postHeader">header</span>
+					</div>
+				</div>
 				<div class="search-container ">
 						<form action="">
 						  <input id="Input1"></input>

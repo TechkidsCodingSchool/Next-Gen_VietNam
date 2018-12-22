@@ -94,16 +94,35 @@
 				float:right;
 			}
 			#section{}
-			#post{}
+			#post {}
 			#post img {
 				max-width:75%;
-				max-height:175px;
+				max-height:200px;
 			}
 			#post #postHeader{
+				position:absolute;
 				color:blue;
 				text-transform: uppercase;
-				font-size:250%;
+				font-size:225%;
+				margin:0;
+				margin-left:5px;
+				cursor:pointer;
+			}
+			#post #postContent{
+				position:relative;
+				font-size:150%;
 				position:absolute;
+				margin-top:45px;
+				color:grey;
+				margin-left:10px;
+			}
+			#post #eI{
+				position:absolute;
+				margin-top:135px;
+				color:lightgrey;
+				font-size:145%;
+				text-align: center;
+				margin-left:500px;
 			}
 		</style>
 		</head>
@@ -121,12 +140,14 @@
 				<div class="container"></div>
 			</div>
 			<div class="container">
-				<h1>Hottest</h1>
+				<h1>HOT</h1>
 				
 				<div id="section">
 					<div id="post">
 						<img src="hanoi.png"></img>
-						<span id="postHeader">header</span>
+						<span id="postHeader">About Hanoi</span>
+						<span id="postContent">Hanoi is a great place to travel and have some fun times,bring your <br>friends and family to explore this place . . . .</span>
+						<span  id="eI">Posted by Minh at 14/3/2018</span>
 					</div>
 				</div>
 				<div class="search-container ">

@@ -18,6 +18,7 @@
 			body {
 				margin:0;
 				left:240px;		
+				font-family:Times;
 			}
 			.icon-bar {
 				width: 100%;
@@ -51,26 +52,6 @@
 				margin-top:-7.5px;
 				cursor: context-menu;
 				}
-			#customers {
-				font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-				border-collapse: collapse;
-				 width: 100%;
-				}
-			#customers td, #customers th {
-				border: 1px solid #ddd;
-				padding: 8px;
-				font-size:18px;
-				color:blue;
-				}
-			#customers tr:nth-child(even){background-color: #f2f2f2;}
-			#customers td:hover{background-color: #ddd;cursor:pointer;transition: color 0.3111111s ease;}
-			#customers th {
-				padding-top: 12px;
-				padding-bottom: 12px;
-				text-align: left;
-				background-color: #4CAF50;
-				color: white;
-				}	
 			#foot{
 				float:bottom;
 				width:100%;
@@ -79,24 +60,10 @@
 				margin-top:100px;
 				color:white;
 				}
-			.search-container{
-				margin-top:20px;
-			}
-				
-			#Input1{
-				border: 2px solid grey;
-				height:40px;
-				width:96%;
-				}
-				
-			#search{
-				height:40px;
-				float:right;
-			}
 			#section{}
 			#post {}
 			#post img {
-				max-width:75%;
+				max-width:300px;
 				max-height:200px;
 			}
 			#post #postHeader{
@@ -124,6 +91,13 @@
 				text-align: center;
 				margin-left:500px;
 			}
+			#sectionTitle{
+				color:#F26363;
+				border:1.5px solid red;
+				border-top-style: none;
+				border-right-style: none;
+				border-left-style: none;
+			}
 		</style>
 		</head>
 		<body>
@@ -140,42 +114,21 @@
 				<div class="container"></div>
 			</div>
 			<div class="container">
-				<h1>HOT</h1>
-				
 				<div id="section">
+					<h1 id="sectionTitle">Favourite Guide</h1>
+					<div id="post">
+						<img src="vietnam.png"></img>
+						<span id="postHeader">About Vietnam</span>
+						<span id="postContent">Hanoi is a great place to travel and have some fun times,bring your <br>friends and family to explore this place . . . .</span>
+						<span  id="eI">Posted by Minh at 14/3/2018</span>
+					</div><hr>
 					<div id="post">
 						<img src="hanoi.png"></img>
 						<span id="postHeader">About Hanoi</span>
 						<span id="postContent">Hanoi is a great place to travel and have some fun times,bring your <br>friends and family to explore this place . . . .</span>
 						<span  id="eI">Posted by Minh at 14/3/2018</span>
-					</div>
+					</div><hr>
 				</div>
-				<div class="search-container ">
-						<form action="">
-						  <input id="Input1"></input>
-						   <button id="search"class="btn btn-primary" placeholder="Search"><i class="fa fa-search"></i></button>
-						</form>
-				</div>
-				<table id="customers" style="margin-top:10px;">
-					<tr>
-						<th><center>RECOMMENDED</center></th>
-					 </tr>
-					<tr>
-						<td>gfdsgasdgsdfsafdasfsdgfyds</td>
-					</tr>
-					<tr>
-						<td>sadsdgsfdhgfhdfhvvvvvvvvvvvvvvvvvvvvvvvvvv</td>
-					</tr>
-					<tr>
-						<td>sadsdgsfdhgfhdfh</td>
-					</tr>
-				</table>
-			</div>
-			<footer id="foot">
-				<div class="container">
-					<h1>footer</h1>
-				</div>
-			</footer>
 		</body>
 				
 				

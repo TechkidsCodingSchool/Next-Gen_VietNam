@@ -1,10 +1,11 @@
 posts=[
 	{titles:"Recommended places to travel",content:"Find out about the most favourites places travellers go across Vietnam,from north to south.",img:"imgs/vietnam.png",link:"projectnextgen-post1.html",date:"14/3/2018"},
 	{titles:"Things to be bought with in Vietnam",content:"You can't travel to any country without any items in your backpack!In vietnam,these are the top things you need to bring.",img:"imgs/hanoi.png",link:"projectnextgen-post2.html",date:"16/7/2018"},
+	{titles:"21 Essential Phrases You'll Need in Vietnam",content:"Communication is the number 1 thing when travelling into diffrent country especially with Vietnam-a non english speaking country.",img:"imgs/language.jpg",link:"projectnextgen-post3.html",date:"6/1/2019"},
 ]
 			createPosts();
 			function createPosts(){
-				for (var i=0;i<2;i++){
+				for (var i=0;i<3;i++){
 					var btn=document.createElement("DIV");
 					document.getElementById("section").appendChild(btn); 
 					btn.id = "post" + i; 

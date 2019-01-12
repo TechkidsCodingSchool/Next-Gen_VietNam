@@ -11,7 +11,7 @@ body {
 			.icon-bar a {
 				width: 11%;
 				text-align: center;
-				padding: 12px 0;
+				padding: 4px 0;
 				transition: all 0.3s ease;
 				color: white;
 				font-size: 32px;
@@ -32,7 +32,7 @@ body {
 				height:425px;
 				background-image: url('imgs/vietnam.png');
 				background-size: 100% 100%;	
-				margin-top:-7.5px;
+				margin-top:0px;
 				cursor: context-menu;
 				}
 			#foot{
@@ -81,11 +81,7 @@ body {
 				border-right-style: none;
 				border-left-style: none;
 			}
-			.container{
-				overflow: hidden;
-				  white-space: nowrap;
-				  text-overflow: ellipsis;
-			}
+
 			#display{
 				margin-top:10px;
 				height:500px;
@@ -95,14 +91,32 @@ body {
 				width: 75%;
 			}
 			.title{
-				font-size:45px
+				font-size:40px;
+				
 			}
 			.heading{
-				font-size:75px;
+				font-size:50px;
 				font-weight: 700;
 			}
 			#title{
 				font-size:30px;
 				text-indent:40px;
-				margin-top:75px;
+			
+			}
+			p{
+				text-indent: 30px;
+				margin-left:10px;
+				font-size:35px;
+				
+			}
+			strong{
+				color:#01FF70;
+			}
+			::selection {
+			  color:#FFA500;
+			  
+			}
+			
+			.container {
+				max-width: 1225px;
 			}

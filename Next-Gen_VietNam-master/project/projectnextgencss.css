@@ -51,7 +51,7 @@ body {
 				position:absolute;
 				color:blue;
 				text-transform: none;
-				font-size:215%;
+				font-size:175%;
 				margin:0;
 				margin-left:5px;
 				cursor:pointer;
@@ -59,7 +59,7 @@ body {
 			}
 			#section #postContent{
 				position:relative;
-				font-size:150%;
+				font-size:140%;
 				position:absolute;
 				margin-top:45px;
 				color:grey;
@@ -70,9 +70,9 @@ body {
 				position:absolute;
 				margin-top:135px;
 				color:lightgrey;
-				font-size:145%;
+				font-size:115%;
 				text-align: center;
-				margin-left:350px;
+				margin-left:300px;
 			}
 			#sectionTitle{
 				color:#F26363;
@@ -84,14 +84,14 @@ body {
 
 			#display{
 				margin-top:10px;
-				height:375px;
+				height:325px;
 				display: block;
 				margin-left: auto;
 				margin-right: auto;
-				width: 85%;
+				width:50%;
 			}
 			.title{
-				font-size:40px;
+				font-size:35px;
 				
 			}
 			.heading{
@@ -106,7 +106,7 @@ body {
 			p{
 				text-indent: 30px;
 				margin-left:10px;
-				font-size:35px;
+				font-size:30px;
 				
 			}
 			strong{
@@ -118,7 +118,19 @@ body {
 			}
 			
 			.container {
-				max-width: 1000px;
-				left:200px;
+				max-width: 925px;
+				left:250px;
 				position:absolute;
+				border-right:1px solid	#DCDCDC;
+			}
+			#sidePostSection{max-width:260px;max-height:100%;margin-left:200px;text-align:center;position:fixed;;top:150px;right:130px;}
+			#sideImg{
+				width:260px;
+				height:135px;
+				#sidePost{border-bottom:32px solid black;}
+			}
+			#sidePostHeader{
+				text-transform: none;
+				color:blue;
+				font-size:23px;
 			}

@@ -50,12 +50,12 @@ body {
 			#section #postHeader{
 				position:absolute;
 				color:blue;
-				text-transform: none;
+				text-decoration:none;
 				font-size:175%;
 				margin:0;
 				margin-left:5px;
 				cursor:pointer;
-				text-decoration:none;
+				
 			}
 			#section #postContent{
 				position:relative;
@@ -106,7 +106,9 @@ body {
 			p{
 				text-indent: 30px;
 				margin-left:10px;
-				font-size:30px;
+				font-size:28px;
+				text-align:justify;
+				 text-justify:inter-word;
 				
 			}
 			strong{
@@ -116,21 +118,16 @@ body {
 			  color:#FFA500;
 			  
 			}
+			a{text-decoration:none;}
 			
-			.container {
-				max-width: 925px;
-				left:250px;
-				position:absolute;
-				border-right:1px solid	#DCDCDC;
-			}
-			#sidePostSection{max-width:260px;max-height:100%;margin-left:200px;text-align:center;position:fixed;;top:150px;right:130px;}
+			#sidePostSection{max-width:260px;max-height:100%;margin-left:200px;text-align:center;position:fixed;top:100px;right:130px;}
 			#sideImg{
 				width:260px;
 				height:135px;
 
 			}
 			#sidePostHeader{
-				text-transform: none;
+				text-decoration:none;
 				color:blue;
 				font-size:23px;
 			}

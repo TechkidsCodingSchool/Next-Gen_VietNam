@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+		<link rel="stylesheet" type="text/css" href="projectnextgencss.css">
+		<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+		</head>
+		<style>
+		.container{
+			position:relative;
+			margin: 0 auto;
+			width: 80%;
+		}
+		</style>
+		<body>
+			<div class='container'>
+				<ul id="section">
+					<h1 id="sectionTitle">Favourite Guide</h1>
+				</ul>
+					
+			</div>
+		</body>
+		<script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyBrItE-kYM4dU0kaft7WYjb3749lCv42uA",
+                authDomain: "ninja-firestore.firebaseapp.com",
+                databaseURL: "https://vietnamguide-minh.firebaseio.com",
+                projectId: "vietnamguide-minh",
+                storageBucket: "vietnamguide-minh.appspot.com",
+                messagingSenderId: "176079657618"
+            };
+            firebase.initializeApp(config);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+        </script>
+		<script src="app.js"></script>
+	</html>

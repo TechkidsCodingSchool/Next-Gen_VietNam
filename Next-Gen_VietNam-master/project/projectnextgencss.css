@@ -51,19 +51,19 @@ body {
 				position:absolute;
 				color:blue;
 				text-decoration:none;
-				font-size:175%;
+				font-size:200%;
 				margin:0;
 				margin-left:5px;
 				cursor:pointer;
 				
 			}
 			#section #postContent{
-				position:relative;
-				font-size:140%;
 				position:absolute;
+				font-size:165%;
+				
 				margin-top:45px;
 				color:grey;
-				margin-left:10px;
+				margin-left:310px;
 				 
 			}
 			#section #eI{
@@ -116,10 +116,7 @@ body {
 			}
 			::selection {
 			  color:#FFA500;
-			  
-			}
-			a{text-decoration:none;}
-			
+			}			
 			#sidePostSection{max-width:260px;max-height:100%;margin-left:200px;text-align:center;position:fixed;top:100px;right:130px;}
 			#sideImg{
 				width:260px;
@@ -130,4 +127,8 @@ body {
 				text-decoration:none;
 				color:blue;
 				font-size:23px;
+			}
+			
+			ul{
+				list-style:none;
 			}

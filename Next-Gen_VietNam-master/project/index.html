@@ -4,6 +4,8 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">	
 		<link rel="stylesheet" type="text/css" href="projectnextgencss.css">
+		<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
 		<meta charset="utf-8"/>	
 		</head>
 		<style>
@@ -28,14 +30,30 @@
 				<p>Our newest site "VNGUIDE "will provide you some of the best tips and tricks about travelling to Vietnam-A beautiful and cultural country.This website will make your trip to Vietnam a lot more fun,exciting and memorable.</p>
 				<h1 class="heading">Detailed information on developers and sources</h1>
 				<p><strong>"NguyenCongMinh"</strong> is the only developer of this website.He is a 14 years old Vietnamese boy who wants to get into creating website.He does everything in building this web site with the help of <strong>"DaoTuanAnh"</strong>,who is currently a teacher at <strong>"Techkids"</strong>,which is a developing school in Vietnam.Also,Minh also finds sources for building the website such as for <a href="https://www.w3schools.com/">w3schools.com</a> and  <a href="https://stackoverflow.com/">stackoverflow.com</a> and source material that I used(which is usually linked at the end) is: <a href="https://tours4fun.com/">tours4fun.com</a>, <a href="https://theculturetrip.com/">theculturetrip.com</a>, <a href="https://wikipedia.org/">wikipedia.org</a>, <a href="https://itourvn.com/">itourvn.com</a> and <a href="https://youtube.com/">youtube.com</a>.</p>
-				<div id="section">
+				<ul id="section">
 					<h1 id="sectionTitle">Favourite Guide</h1>
-					</div>
+					
+					
+				</ul>
 					<a style="float:right" href="projectnextgen-more.html" >More...</a>
 				</div>
 		</body>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-		<script  rel="javascript" type="text/javascript" src="projectnextgenjavascript.js"></script>
+		<script  rel="javascript" type="text/javascript" src="app.js"></script>
+		  <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyBrItE-kYM4dU0kaft7WYjb3749lCv42uA",
+                authDomain: "ninja-firestore.firebaseapp.com",
+                databaseURL: "https://vietnamguide-minh.firebaseio.com",
+                projectId: "vietnamguide-minh",
+                storageBucket: "vietnamguide-minh.appspot.com",
+                messagingSenderId: "176079657618"
+            };
+            firebase.initializeApp(config);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+        </script>
 	</html>

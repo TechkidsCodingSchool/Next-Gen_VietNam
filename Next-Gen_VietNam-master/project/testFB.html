@@ -2,8 +2,12 @@
 	<html>
 		<head>
 		<link rel="stylesheet" type="text/css" href="projectnextgencss.css">
+		<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+		<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 		</head>
 		<style>
 		.container{
@@ -11,28 +15,58 @@
 			margin: 0 auto;
 			width: 80%;
 		}
-		</style>
+		</style> 
 		<body>
+		
+		<div class='loginBox' id="firebaseui-auth-container"></div>
+		
+		<div id="loader">Loading...</div>
 			<div class='container'>
-				<ul id="section">
-					<h1 id="sectionTitle">Favourite Guide</h1>
-				</ul>
-					
 			</div>
 		</body>
 		<script>
             // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyBrItE-kYM4dU0kaft7WYjb3749lCv42uA",
-                authDomain: "ninja-firestore.firebaseapp.com",
-                databaseURL: "https://vietnamguide-minh.firebaseio.com",
-                projectId: "vietnamguide-minh",
-                storageBucket: "vietnamguide-minh.appspot.com",
-                messagingSenderId: "176079657618"
-            };
-            firebase.initializeApp(config);
+           // Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyBVdD2sNtC42X0Iv96neMu-mOHDoPcZsEQ",
+			authDomain: "vietnamguide-minh.firebaseapp.com",
+			databaseURL: "https://vietnamguide-minh.firebaseio.com",
+			projectId: "vietnamguide-minh",
+			storageBucket: "vietnamguide-minh.appspot.com",
+			messagingSenderId: "109746609160"
+		};
+			firebase.initializeApp(config);
             const db = firebase.firestore();
             db.settings({ timestampsInSnapshots: true }); 
+			
+			var uiConfig = {
+			  callbacks: {
+				signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+				  // User successfully signed in.
+				  // Return type determines whether we continue the redirect automatically
+				  // or whether we leave that to developer to handle.
+				  return true;
+				},
+				uiShown: function() {
+				  // The widget is rendered.
+				  // Hide the loader.
+				  document.getElementById('loader').style.display = 'none';
+				}
+			  },
+			  // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+			  signInFlow: 'popup',
+			  signInSuccessUrl: 'index.html',
+			  signInOptions: [
+				// Leave the lines as is for the providers you want to offer your user
+				firebase.auth.EmailAuthProvider.PROVIDER_ID,
+			  ],
+			  // Terms of service url.
+			  tosUrl: 'vietnamteach.info',
+			  // Privacy policy url.
+			  privacyPolicyUrl: 'vietnamteach.info'
+			};
+			var ui = new firebaseui.auth.AuthUI(firebase.auth());
+			ui.start('#firebaseui-auth-container', uiConfig);
         </script>
 		<script src="app.js"></script>
 	</html>

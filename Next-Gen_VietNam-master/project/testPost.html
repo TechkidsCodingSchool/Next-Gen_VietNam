@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+		<link rel="stylesheet" type="text/css" href="projectnextgencss.css">
+		<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+		</head>
+		<style>
+			.container{
+				position:relative;
+				margin: 0 auto;
+				width: 80%;
+			} postsList
+		</style> 
+		<body>
+	
+		</body>
+		  <script>
+            // Initialize Firebase
+            var config = {
+				apiKey: "AIzaSyBVdD2sNtC42X0Iv96neMu-mOHDoPcZsEQ",
+				authDomain: "vietnamguide-minh.firebaseapp.com",
+				databaseURL: "https://vietnamguide-minh.firebaseio.com",
+				projectId: "vietnamguide-minh",
+				storageBucket: "vietnamguide-minh.appspot.com",
+				messagingSenderId: "109746609160"
+			};
+			firebase.initializeApp(config);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+        </script>
+		<script src="content.js"></script>
+	</html>

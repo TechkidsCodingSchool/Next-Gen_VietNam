@@ -42,7 +42,7 @@ body {
 				background:black;
 				margin-top:100px;
 				color:white;
-				}
+				} h3
 			#section #img {
 				max-width:300px;
 				max-height:200px;
@@ -138,3 +138,4 @@ body {
 				left: 50%;
 				transform: translate(-50%, -50%);
 			}
+			h3 { font-weight:normal; }

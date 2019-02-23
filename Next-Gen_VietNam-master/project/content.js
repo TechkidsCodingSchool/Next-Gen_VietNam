@@ -4,62 +4,31 @@ db.collection('postContent').get().then((snapshot) => {
         render(array)  ; 
     })
 })
+const page = document.querySelector('h3');
 function render(array){
     for (var i = 0;i < array.post.length;i++){
-        console.log(array.post[i]['type']);
+		const type=array.post[i]['type'];
+		if (type == 'title'){ 
+			let title=document.createElement('h1');
+			title.setAttribute('class' , 'heading' );
+			title.textContent= array.post[i]['data'];
+			page.appendChild(title);
+		}else if (type == 'parHeader'){
+			let par=document.createElement('p');
+			par.textContent= array.post[i]['data'];
+			page.appendChild(par);
+		}else if (type == 'par'){
+			let heading=document.createElement('p');
+			let image=document.createElement('img');
+			let content=document.createElement('p');
+			heading.setAttribute('class' , 'title' );
+			image.setAttribute('id' , 'display' );
+			content.textContent= array.post[i]['content'];
+			image.src= array.post[i]['img'];
+			heading.textContent= i - 1 + '.' + array.post[i]['heading'];
+			page.appendChild(heading);
+			page.appendChild(image);
+			page.appendChild(content);
+		}
     }
 }
-/*
-const postsList = document.querySelector('#section');
-const form= document.querySelector('#add-post-form')
-//create element and render cafe
-function renderPosts(doc){
-	let div=document.createElement('div');
-	let title= document.createElement('a');
-	let content= document.createElement('span');
-	let image= document.createElement('img');
-	div.setAttribute('data-id' , doc.id );
-	console.log( doc.id )
-	title.textContent = doc.data().title;
-	content.textContent = doc.data().content;
-	image.src = doc.data().image;
-	//addIDs
-	title.setAttribute("id", 'postHeader');
-	title.setAttribute("href", doc.data().link);
-	content.setAttribute("id",'postContent' );
-	image.setAttribute("id", 'img');
-	
-	//appendChild
-	div.appendChild(content);
-	div.appendChild(image);
-	div.appendChild(title) ;
-	postsList.appendChild(div); 
-	//deleting data
-	cross.addEventListener('click',(e) => {
-		e.stopPropagation();
-		let id = e.target.parentElement.getAttribute('data-id')
-		db.collection('posts').doc(id).delete();
-	}) 
-}
-
-db.collection('postContent').onSnapshot(snapshot => {
-	let changes = snapshot.docChanges();
-	changes.forEach(change => { 
-		console.log(change.doc.data());
-			if (change.type == 'added'){
-				renderPosts(change.doc)
-			}else if (change.type == 'removed'){
-				let li =postsList.querySelector('[data-id=' + change.doc.id + ']');
-				postsList.removeChild(li); 
-			}
-	})
-})
-
-//getting data (old)
-	    db.collection('posts').get().then((snapshot) => {
-		snapshot.docs.forEach(doc =>  {
-			renderPosts(doc);
-		})
-	}) */
-	
-	

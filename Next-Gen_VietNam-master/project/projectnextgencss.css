@@ -108,8 +108,10 @@ body {
 				margin-left:10px;
 				font-size:28px;
 				text-align:justify;
-				 text-justify:inter-word;
-				
+				 text-justify:inter-word;	
+			}
+			p:first-letter{
+				text-transform:capitalize;
 			}
 			strong{
 				color:#01FF70;
@@ -139,3 +141,5 @@ body {
 				transform: translate(-50%, -50%);
 			}
 			h3 { font-weight:normal; }
+			
+			

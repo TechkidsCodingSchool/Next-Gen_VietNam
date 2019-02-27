@@ -1,10 +1,16 @@
-db.collection('postContent').get().then((snapshot) => {
-        snapshot.docs.forEach(doc =>  {
-        const array=doc.data();
-        render(array)  ; 
-    })
+db.collection('postContent').onSnapshot(snapshot => {
+	let changes = snapshot.docChanges();
+	changes.forEach(change => { 
+			if (change.type == 'added'){
+				const array=(change.doc.data());
+				render(array);
+			}else if (change.type == 'removed'){
+				let li =postsList.querySelector('[data-id=' + change.doc.id + ']');
+				postContent.removeChild(div);  
+			}
+	})
 })
-const page = document.querySelector('h3');
+const page = document.querySelector('.container');
 function render(array){
     for (var i = 0;i < array.post.length;i++){
 		const type=array.post[i]['type'];
@@ -29,6 +35,6 @@ function render(array){
 			page.appendChild(heading);
 			page.appendChild(image);
 			page.appendChild(content);
-		}
+			}
     }
 }

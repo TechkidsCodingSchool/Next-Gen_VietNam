@@ -7,6 +7,7 @@ function renderPosts(doc){
 	let title= document.createElement('a');
 	let content= document.createElement('span');
 	let image= document.createElement('img');
+	let hr= document.createElement('hr');
 	div.setAttribute('data-id' , doc.id );
 	console.log( doc.id )
 	title.textContent = doc.data().title;
@@ -16,12 +17,13 @@ function renderPosts(doc){
 	title.setAttribute("id", 'postHeader');
 	title.setAttribute("href", doc.data().link);
 	content.setAttribute("id",'postContent' );
-	image.setAttribute("id", 'img');
+	image.setAttribute("class", 'pImg');
 	
 	//appendChild
 	div.appendChild(content);
 	div.appendChild(image);
 	div.appendChild(title) ;
+	div.appendChild(hr) ;
 	postsList.appendChild(div); 
 	//deleting data
 	/*cross.addEventListener('click',(e) => {
